@@ -45,28 +45,30 @@ static bool equals(char* str1,char* str2){
 	}// End if
 	return resp;
 }// End equals()
-/*
+
 static int indexOff(char* str,char chr){
 	for(int i = 0; i < length(str); i++){
 		if(str[i] == chr) return i;
 	}// End for
 	return -1;
 }// End indexOff()
-*/
+
 static bool contains(char* line,char* substring){
 	bool resp = false;
 	char* string = (char*)malloc(1000*sizeof(char));
-	for(int i = 0; i < length(line); i++){
-		
-		if(line[i] == substring[0]){
-			string = subString(line,i,((i+length(substring)-1)));	
-			if(equals(string,substring)){
-				resp = true;
+	if(length(line) < length(substring)){
+		return resp;
+	}// End if
+	else{
+		for(int i = 0; i < length(line); i++){
+			if(line[i] == substring[0]){
+				string = subString(line,i,((i+length(substring)-1)));	
+				if(equals(string,substring)){
+					resp = true;
+				}// End if
 			}// End if
-	
-		}// End if
-	
-	}// End for
+		}// End for
+	}// End else
 	free(string);
 	return resp;
 }// End contains()
