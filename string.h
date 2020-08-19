@@ -11,9 +11,10 @@
  */
 #include<stdlib.h>
 #include<stdbool.h>
+#include <stdio.h>
 
 static int length(char* line){
-	int i;
+	int i = 0;
 	for(i = 0; line[i] != '\0'; i++);
 	return i;
 }// End length()

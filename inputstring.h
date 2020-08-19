@@ -16,7 +16,7 @@
 
 void clear(char* str){
 	for(int i = 0; i < length(str); i++){
-		str[i] = ' ';
+		str[i] = '2';
 	}// End for
 }// End clear()
 
