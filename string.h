@@ -13,6 +13,8 @@
 #include<stdbool.h>
 #include <stdio.h>
 
+// Iinicio do arquivo .h
+
 static int length(char* line){
 	int i;
 	for(i = 0; line[i] != '\0'; i++);
